@@ -14,6 +14,12 @@ html.bsod, body.bsod {
     color: white;
 }
 
+html.terminal, body.terminal {
+    padding-top: unset;
+    background-color: black;
+    color: white;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -61,6 +67,15 @@ pre {
 code {
     padding: 5px;
     background-color: #202020;
+}
+
+input.terminal {
+    width: calc(100% - 20px);
+    font-size: 1em;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
 }
 
 .logo {
