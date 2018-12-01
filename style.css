@@ -119,6 +119,10 @@ input.terminal {
     margin-left: 5px;
 }
 
+.social.github {
+    background-color: #3a3a3a;
+}
+
 .social.yt {
     background-color: #dc0000;
 }
