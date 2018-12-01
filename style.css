@@ -1,20 +1,34 @@
-:root {
-    --primaryColour: #5190f7;
-    --backgroundColour: #f2f2f2;
-}
-
 * {
-    font-family: "Century Gothic", "URW Gothic L", "Apple Gothic", "Muli", sans-serif;
+    font-family: "Overpass Mono", "Roboto Mono", sans-serif;
 }
 
 html, body {
-    margin-top: 10vh;
-    text-align: center;
-    background-color: var(--backgroundColour);
+    padding-top: 20px;
+    background-color: black;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 16px);
+    padding: 10px;
+    z-index: 1;
+    background-color: #3d3d3d;
+}
+
+h1, h2 {
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+h2 {
+    font-weight: normal;
 }
 
 a {
-    color: var(--primaryColour);
+    color: #5190f7;
     text-decoration: none;
 }
 
@@ -22,6 +36,66 @@ a:hover {
     text-decoration: underline;
 }
 
-.profilePicture {
-    width: 20vw;
+pre {
+    padding: 5px;
+    overflow-x: auto;
+    background-color: #202020;
+}
+
+code {
+    padding: 5px;
+    background-color: #202020;
+}
+
+.logo {
+    padding: 5px;
+    font-weight: bold;
+    background-color: #5190f7;
+    color: white;
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
+.logoO {
+    color: yellow;
+}
+
+.headerRight {
+    float: right;
+    height: 100%;
+}
+
+.headerButton {
+    padding: 5px;
+    color: white;
+}
+
+.headerButton.selected {
+    font-weight: bold;
+}
+
+.headerButton:hover {
+    background-color: #575757;
+    text-decoration: none;
+}
+
+.social {
+    padding: 5px;
+    background-color: #5190f7;
+    color: white;
+    margin-left: 5px;
+}
+
+.social.yt {
+    background-color: #dc0000;
+}
+
+.social:hover {
+    text-decoration: none;
+}
+
+.socialMore {
+    color: rgba(255, 255, 255, 0.5);
 }
