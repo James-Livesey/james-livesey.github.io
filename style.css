@@ -8,6 +8,12 @@ html, body {
     color: white;
 }
 
+html.bsod, body.bsod {
+    padding-top: unset;
+    background-color: blue;
+    color: white;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -34,6 +40,16 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+a.button {
+    padding: 5px;
+    background-color: #5190f7;
+    color: white;
+}
+
+a.button:hover {
+    text-decoration: none;
 }
 
 pre {
