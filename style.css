@@ -70,7 +70,7 @@ code {
 }
 
 input.terminal {
-    width: calc(100% - 20px);
+    width: calc(100% - 50px);
     font-size: 1em;
     border: none;
     outline: none;
