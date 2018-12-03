@@ -119,8 +119,12 @@ input.terminal {
     margin-left: 5px;
 }
 
-.social.github {
+.social.github, .social.fhpx {
     background-color: #3a3a3a;
+}
+
+.social.gameproxy {
+    background-color: #6b29ef;
 }
 
 .social.yt {
