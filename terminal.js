@@ -26,9 +26,10 @@ var commands = {
             print("");
             print("A star (*) next to a name means that the command is disabled.");
             print("");
-            print(" cat [file]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd [directory]");
-            print(" help [command]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ls");
-            print(" mkdir [directory]&nbsp;&nbsp;&nbsp;touch [file]");
+            print("&nbsp;cat [file]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cd [directory]");
+            print("&nbsp;help [command]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ls");
+            print("&nbsp;mkdir [directory]&nbsp;&nbsp;&nbsp;packager [install|remove|explore] [package]");
+            print("&nbsp;touch [file]");
         } else if (params == "name") {
             print("Oh man. Do you really have to take everything literally?!");
         } else {
@@ -48,6 +49,9 @@ Displays the current directory contents.`,
                 mkdir: `mkdir [directory]
 <br>
 Creates a directory.`,
+                packager: `packager [install|remove|explore] [package]
+<br>
+Installs or removes a package. Can also explore available packages.`,
                 touch: `touch [file]
 <br>
 Creates a file with empty contents.`
@@ -117,6 +121,51 @@ Creates a file with empty contents.`
             } else {
                 currentFolder[params] = {};
             }
+        }
+    },
+
+    packager: function(params) {       
+        var mode = params.split(" ")[0];
+        var package = params.split(" ").length > 1 ? params.split(" ")[1] : "";
+
+        if (mode == "install") {
+            if (packageList[package] != undefined) {
+                commands[package] = packages[package];
+
+                if (packageList[package].deps != undefined && packageList[package].deps != []) {
+                    print("Installing dependencies for package '" + package + "'...");
+
+                    for (var i = 0; i < packageList[package].deps.length; i++) {
+                        commands.packager("install " + packageList[package].deps[i]);
+                    }
+                } else {
+                    print("No dependencies for package '" + package + "'");
+                }
+
+                print("Successfully installed package '" + package + "'");
+            } else {
+                print("packager: unavailable package '" + package + "'");
+            }
+        } else if (mode == "remove") {
+            if (commands[package] != undefined) {
+                delete commands[package];
+            } else {
+                print("packager: package '" + package + "' not installed");
+            }
+        } else if (mode == "explore") {
+            for (package in packageList) {
+                var deps = "";
+
+                if (packageList[package].deps != undefined) {
+                    for (var i = 0; i < packageList[package].deps.length; i++) {
+                        deps += packageList[package].deps[i] + " "
+                    }
+                }
+
+                print(package + " (" + packageList[package].version + ") " + packageList[package].description + (deps == "" ? ", requires no pacakges" : ", requires: " + deps));
+            }
+        } else {
+            print("packager: invalid mode '" + mode + "'");
         }
     },
 
