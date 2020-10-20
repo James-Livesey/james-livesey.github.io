@@ -6,7 +6,8 @@
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="media/Profile.png">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
-        <script src="jquery.min.js"></script>
+        <script src="/lib/jquery.min.js"></script>
+        <script src="/lib/showdown.min.js"></script>
         <script src="script.js"></script>
     </head>
     <body>
@@ -20,18 +21,28 @@
             </div>
         </header>
         <h1>James Livesey</h1>
-        <p>
-            Founder of <a href="https://liveg.tech" target="_blank">LiveG
-            Technologies</a> and knows 14+ programming languages.
-        </p>
+        <p>Founder of <a href="https://liveg.tech" target="_blank">LiveG Technologies</a> and knows 14+ programming languages.</p>
         <p>Location: Norwich, England</p>
-        <div>
-            <a href="https://github.com/James-Livesey" target="_blank" class="social github">^( )^<span class="socialMore"> @James-Livesey on GitHub</span></a>
-            <a href="https://twitter.com/jthecoder" target="_blank" class="social twitter">(*)><span class="socialMore"> @jthecoder on Twitter</span></a>
-            <a href="https://500px.com/James-Livesey" target="_blank" class="social fhpx">500px<span class="socialMore"> @James-Livesey on 500px</span></a>
-            <a href="https://gameproxy.host/profile.html?user=sm20Y8fTGoPfA45tqudOPakR3mr1" target="_blank" class="social gameproxy">(>>)<span class="socialMore"> James on GameProxy</span></a>
-            <a href="#" class="social yt">(>)<span class="socialMore"> YouTube coming soon!</span></a>
+        <div class="socials">
+            <a href="https://github.com/James-Livesey" target="_blank" aria-label="@James-Livesey on GitHub" class="social github">^( )^<span class="socialMore"> @James-Livesey on GitHub</span></a>
+            <a href="https://twitter.com/jthecoder" target="_blank" aria-label="@jthecoder on Twitter" class="social twitter">(*)><span class="socialMore"> @jthecoder on Twitter</span></a>
+            <a href="https://glipo.net/u/James" target="_blank" aria-label="u/James on Glipo" class="social glipo">(G)<span class="socialMore"> u/James on Glipo</span></a>
+            <a href="https://glipo.net/u/James" target="_blank" aria-label="u/James-Livesey on Reddit" class="social reddit">*~(:D)<span class="socialMore"> u/James-Livesey on Reddit</span></a>
+            <a href="https://500px.com/James-Livesey" target="_blank" aria-label="@James-Livesey on 500px" class="social fhpx">500px<span class="socialMore"> @James-Livesey on 500px</span></a>
+            <a href="https://gameproxy.host/profile.html?user=sm20Y8fTGoPfA45tqudOPakR3mr1" target="_blank" aria-label="James on GameProxy" class="social gameproxy">(>>)<span class="socialMore"> James on GameProxy</span></a>
+            <a href="#" aria-label="YouTube coming soon!" class="social yt">(>)<span class="socialMore"> YouTube coming soon!</span></a>
         </div><br>
+        <p>Quick facts about me:</p>
+        <ul class="facts">
+            <li><span title="I was born on Friday, 14 November 2003 at 5:19 AM." class="age">📅 I am a few years old (the script that gets my age hasn't started yet!)</span></li>
+            <li>💻 I use Chrome OS on my Chromebook, and I use a <a>PC with a custom Debian 10 install</a> on it at home</li>
+            <li>👨🏼‍💻 The IDE that I use is Visual Studio Code</li>
+            <li>🌐 I use Chrome for web browsing, and I believe that <a>Safari is the new Internet Explorer</a></li>
+            <li>🧠 I have <a href="https://en.wikipedia.org/wiki/Asperger_syndrome" target="_blank">Asperger's</a></li>
+            <li>🟦 My favourite colour is blue, followed by yellow</li>
+            <li>📰 I do a <em>lot</em> of web development, and use Firebase quite a lot</li>
+            <li>🧒🏼 I've been writing code since the age of 6</li>
+        </ul>
         <a href="terminal.html">Try out my terminal!</a>
     </body>
 </html>

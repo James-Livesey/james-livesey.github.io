@@ -58,6 +58,14 @@ a.button:hover {
     text-decoration: none;
 }
 
+img {
+    display: block;
+    max-width: 80%;
+    max-height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 pre {
     padding: 5px;
     overflow-x: auto;
@@ -112,6 +120,10 @@ input.terminal {
     text-decoration: none;
 }
 
+.socials {
+    line-height: 3;
+}
+
 .social {
     padding: 5px;
     background-color: #5190f7;
@@ -127,6 +139,14 @@ input.terminal {
     background-color: #6b29ef;
 }
 
+.social.glipo {
+    background-color: #3089ff;
+}
+
+.social.reddit {
+    background-color: #ff4301;
+}
+
 .social.yt {
     background-color: #dc0000;
 }
@@ -137,4 +157,16 @@ input.terminal {
 
 .socialMore {
     color: rgba(255, 255, 255, 0.5);
+}
+
+.age {
+    cursor: help;
+}
+
+.facts {
+    list-style-type: none;
+}
+
+.articleExcerpt p:last-child {
+    display: inline;
 }
