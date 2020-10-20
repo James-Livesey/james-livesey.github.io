@@ -66,6 +66,16 @@ $(function() {
                     articles.push(new Article(file["name"], contents));
 
                     if (complete) {
+                        articles.sort(function(a, b) {
+                            if (a.date.getTime() < b.date.getTime()) {
+                                return 1;
+                            } else if (a.date.getTime() > b.date.getTime()) {
+                                return -1;
+                            } else {
+                                return 0;
+                            }
+                        });
+
                         renderArticles();
                     }
                 });
