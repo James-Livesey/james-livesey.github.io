@@ -1,4 +1,10 @@
 $(function() {
+    if (window.location.pathname.startsWith("/atto/")) {
+        window.location.href = "/atto";
+
+        return;
+    }
+
     var lines = [
         "Beginning dump of physical memory",
         "",
