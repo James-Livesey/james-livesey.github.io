@@ -1,6 +1,6 @@
 $(function() {
     if (window.location.pathname.startsWith("/atto/")) {
-        window.location.href = "/atto";
+        window.location.replace(`https://atto.devicefuture.org/${window.location.pathname.substring(5)}`);
 
         return;
     }
