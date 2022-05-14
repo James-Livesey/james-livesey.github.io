@@ -1,5 +1,6 @@
 * {
     font-family: "Overpass Mono", "Roboto Mono", sans-serif;
+    font-variant-ligatures: none;
 }
 
 html, body {
@@ -73,8 +74,11 @@ pre {
 }
 
 code {
-    padding: 5px;
     background-color: #202020;
+}
+
+code:not(pre code) {
+    padding: 5px;
 }
 
 input.terminal {
