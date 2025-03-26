@@ -139,7 +139,7 @@ input.terminal {
     background-color: #3a3a3a;
 }
 
-.social.gameproxy {
+.social.mastodon, .social.gameproxy {
     background-color: #6b29ef;
 }
 
@@ -163,14 +163,37 @@ input.terminal {
     color: rgba(255, 255, 255, 0.5);
 }
 
+.blink {
+    animation: 1s infinite blink;
+}
+
 .age {
     cursor: help;
 }
 
-.facts {
+.facts, .projects {
     list-style-type: none;
 }
 
 .articleExcerpt p:last-child {
     display: inline;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    51% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 0;
+    }
 }
